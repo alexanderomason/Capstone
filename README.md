@@ -3,8 +3,8 @@ The United States of America has an unfortunately high infant mortality rate com
 
 The aforementioned data sets are the 2014 and 2015 cohort-linked birth/infant death data sets which contain birth records in the united states for 2014-2015 linked to infant death data if an infant born in said years were to die before its first birthday. The birth data recorded in these two files is that of the  U.S. Standard
 Certificate of Live Birth and includes a significant amount of demographic and medical information that can be used to train a predictive model able to classify infants as likely to die or survive their first year of life.
-	
-	Infant Mortality is a tragic and pervasive issue; any tool or strategy to combat it would be a force for good. This is what the training of a predictive model aims to help with. With a model able to accurately predict infant mortality, medical resources could be allocated to infants classified as likely to perish before their first birthday. 
+
+	Infant Mortality is a tragic and pervasive issue and any tool or strategy to combat it would be a force for good. This is what the training of a predictive model aims to help with. With a model able to accurately predict infant mortality, medical resources could be allocated to infants classified as likely to perish before their first birthday. 
 
 
 ### Combatting Infant Mortality With Gradient Boosted Machines
