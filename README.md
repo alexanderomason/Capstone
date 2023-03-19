@@ -1,10 +1,5 @@
 # Capstone
-The United States of America has an unfortunately high infant mortality rate compared to other similarly developed counties, especially smaller countries like Estonia or Iceland. However, even when compared with countries such as Australia or Canada the USA consistently has a higher rate of infant death. This tragic aspect of American demography is what this repo is focused on. We will examine the numerous risk factors associated with infant death from two concatenated data sets for the years 2014 to 2015. The raw data is available at https://www.nber.org/research/data/linked-birthinfant-death-cohort-data but a subset of said data has been cleaned and included in this repo as a parquet file. 
-
-The aforementioned data sets are the 2014 and 2015 cohort-linked birth/infant death data sets which contain birth records in the united states for 2014-2015 linked to infant death data if an infant born in said years were to die before its first birthday. The birth data recorded in these two files is that of the  U.S. Standard
-Certificate of Live Birth and includes a significant amount of demographic and medical information that can be used to train a predictive model able to classify infants as likely to die or survive their first year of life.
-
-	Infant Mortality is a tragic and pervasive issue and any tool or strategy to combat it would be a force for good. This is what the training of a predictive model aims to help with. With a model able to accurately predict infant mortality, medical resources could be allocated to infants classified as likely to perish before their first birthday. 
+The United States of America has an unfortunately high infant mortality rate compared to other similarly developed counties, especially smaller countries like Estonia or Iceland. However, even when compared with countries such as Australia or Canada the USA consistently has a higher rate of infant death. This tragic aspect of American demography is what this repo is focused on. We will examine the numerous risk factors associated with infant death from two concatenated data sets for the years 2014 to 2015. The raw data is available at https://www.nber.org/research/data/linked-birthinfant-death-cohort-data but a subset of said data has been cleaned and included in this repo as a parquet file. The aforementioned data sets are the 2014 and 2015 cohort-linked birth/infant death data sets which contain birth records in the united states for 2014-2015 linked to infant death data if an infant born in said years were to die before its first birthday. The birth data recorded in these two files is that of the  U.S. Standard Certificate of Live Birth and includes a significant amount of demographic and medical information that can be used to train a predictive model able to classify infants as likely to die or survive their first year of life. Infant Mortality is a tragic and pervasive issue and any tool or strategy to combat it would be a force for good. This is what the training of a predictive model aims to help with. With a model able to accurately predict infant mortality, medical resources could be allocated to infants classified as likely to perish before their first birthday. 
 
 
 ### Combatting Infant Mortality With Gradient Boosted Machines
@@ -62,9 +57,9 @@ What did your research find?
 
 #### Outline of project
 
-- [Link to notebook 1]()
-- [Link to notebook 2]()
-- [Link to notebook 3]()
+- [Link to notebook 1](https://github.com/alexanderomason/Capstone/blob/main/Capstone.ipynb)
+- [Link to notebook 2](https://github.com/alexanderomason/Capstone/blob/main/capstone_hyperparams.ipynb)
+- [Link to notebook 3](https://github.com/alexanderomason/Capstone/blob/main/Visualizations.ipynb)
 
 
 ##### Contact and Further Information
