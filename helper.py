@@ -43,7 +43,9 @@ import datetime
 pd.set_option('display.max_columns', None)
 warnings.filterwarnings('ignore') 
 
+
 def performance_result(y_true, y_pred):
+    '''an automated confusion matrix plotter with a selection of classifier metrics'''
     confusion_matrix_plot(y_true, y_pred)
     tn, fp, fn, tp = confusion_matrix(y_true, y_pred).ravel()
     print('FP rate=FP/(FP+TN): ',"{:.4f}".format(fp/((fp+tn))))
@@ -65,6 +67,7 @@ def confusion_matrix_plot(y_true, y_pred):
 
 
 def feature_importances(wrapped):
+    '''The input is a wrapped and trained classifier with a .feature_importances_ method. Returns a sorted DataFrame of feature importances'''
     
     return(pd.DataFrame([wrapped.pipe.named_steps['classifier'].feature_importances_, wrapped.pipe.named_steps['col_transform'].get_feature_names_out()],
              index=['importance','feature']).T.sort_values(by='importance',
@@ -75,75 +78,9 @@ def feature_importances(wrapped):
 class wrapper():
     
     def __init__(self,classifier):
-        self.num=['mager',
- 'riorlive',
- 'riordead',
- 'riorterm',
- 'revis',
- 'cig_0',
- 'cig_1',
- 'cig_2',
- 'cig_3',
- 'mhtr',
- 'bmi',
- 'wgt_r',
- 'wtgain',
- 'apgar5',
- 'dplural',
- 'fagecomb',
- 'combgest',
- 'brthwgt']
-        self.cat=['dob_yy',
- 'dob_mm',
- 'mracehisp',
- 'dob_wk',
- 'bfacil3',
- 'mbstate_rec',
- 'mrace6',
- 'dmar',
- 'meduc',
- 'frace6',
- 'feduc',
- 'recare5',
- 'dmeth_rec',
- 'ay_rec',
- 'sex',
- 'rf_pdiab',
- 'rf_gdiab',
- 'rf_phype',
- 'rf_ghype',
- 'rf_ehype',
- 'rf_ppb',
- 'ab_anti',
- 'ab_aven1',
- 'ab_aven6',
- 'ab_nicu',
- 'ab_seiz',
- 'ab_surf',
- 'ca_anen',
- 'ca_cchd',
- 'ca_cdh',
- 'ca_cleft',
- 'ca_clpal',
- 'ca_disor',
- 'ca_down',
- 'ca_gast',
- 'ca_hypo',
- 'ca_limb',
- 'ca_mnsb',
- 'ca_omph',
- 'mtran',
- 'ld_anes',
- 'ld_antb',
- 'ld_augm',
- 'ld_chor',
- 'ld_indl',
- 'ld_ster',
- 'ip_chlam',
- 'ip_gon',
- 'ip_hepb',
- 'ip_hepc',
- 'ip_syph']
+        '''A helper class for managing transformation pipelines, predictors, as well as storing information on categorical and numerical columns'''
+        self.num=['mager', 'riorlive', 'riordead', 'riorterm', 'revis', 'cig_0', 'cig_1', 'cig_2', 'cig_3', 'mhtr', 'bmi', 'wgt_r', 'wtgain', 'apgar5', 'dplural', 'fagecomb', 'combgest', 'brthwgt']
+        self.cat=['dob_yy', 'dob_mm', 'mracehisp', 'dob_wk', 'bfacil3', 'mbstate_rec', 'mrace6', 'dmar', 'meduc', 'frace6', 'feduc', 'recare5', 'dmeth_rec', 'ay_rec', 'sex', 'rf_pdiab', 'rf_gdiab', 'rf_phype', 'rf_ghype', 'rf_ehype', 'rf_ppb', 'ab_anti', 'ab_aven1', 'ab_aven6', 'ab_nicu', 'ab_seiz', 'ab_surf', 'ca_anen', 'ca_cchd', 'ca_cdh', 'ca_cleft', 'ca_clpal', 'ca_disor', 'ca_down', 'ca_gast', 'ca_hypo', 'ca_limb', 'ca_mnsb', 'ca_omph', 'mtran', 'ld_anes', 'ld_antb', 'ld_augm', 'ld_chor', 'ld_indl', 'ld_ster', 'ip_chlam', 'ip_gon', 'ip_hepb', 'ip_hepc', 'ip_syph']
         self.target=['survival']
         self.num_scaler=StandardScaler()
         self.cat_scaler=OneHotEncoder()
@@ -154,7 +91,7 @@ class wrapper():
                       ('classifier', self.classifier)])
     def fit(self,X,Y):
         self.pipe.fit(X,Y)
-        #self
         return(self)
+    
     def predict(self,xtesta):
         return(self.pipe.predict(xtesta))
