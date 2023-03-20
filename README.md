@@ -59,9 +59,9 @@ Of the three chosen classifiers LightGBM performed the best, albeit by a small m
 
 #### Outline of project
 
-- [Link to notebook 1](https://github.com/alexanderomason/Capstone/blob/main/Capstone.ipynb)
-- [Link to notebook 2](https://github.com/alexanderomason/Capstone/blob/main/capstone_hyperparams.ipynb)
-- [Link to notebook 3](https://github.com/alexanderomason/Capstone/blob/main/Visualizations.ipynb)
+- [Demonstration and Discussion of Preliminary Methods](https://github.com/alexanderomason/Capstone/blob/main/Capstone.ipynb)
+- [More Rigorus Hyperparameter Tuning](https://github.com/alexanderomason/Capstone/blob/main/capstone_hyperparams.ipynb)
+- [Visualizations and Brief Discussion of Demography](https://github.com/alexanderomason/Capstone/blob/main/Visualizations.ipynb)
 
 
 ##### Contact and Further Information
