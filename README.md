@@ -46,7 +46,9 @@ The wrapper class was mainly written to offer an easy method of creating pipelin
 Hyperparameter tuning was accomplished through the use of cross-validation and the novel hyperparameter-tuning library, optuna. Initially, models were trained with the standard accuracy metric for cross-validation. Each type of classifier was able to easily reach over 90% accuracy on the unbalanced test set. However, the utility of this is questionable at best as the data is so imbalanced that a model that classified every infant as likely to survive would have an accuracy score of approx 99.4%. It quickly becomes apparent that using accuracy as a metric for these classifiers is counterproductive to the ultimate goal of producing a useful and/or usable tool for combatting infant mortality. 
 A useful model would be able to consistently identify infants likely to die without intervention so that resources can be allocated to save their lives. Classifying all infants as likely to survive would incur the highest possible number of false positives, which in this case is the most costly type of error. To combat false positives each of the selected models had hyperparameters tuned using the false-positive rate as a cost function and the best combination of hyperparameters was chosen to minimize said metric. 
 
-Of the three chosen classifiers LightGBM performed the best, albeit by a small margin. Of infants deaths the models were able to accurately classify just over eighty percent of the data while for infants that survived the models accuractely classified over nintey percent of the data.  
+Of the three chosen classifiers LightGBM performed the best, albeit by a small margin. Of infants deaths the models were able to accurately classify just over eighty percent of the data while for infants that survived the models accuractely classified over nintey percent of the data. 
+
+I have included in this repo a serialized dictionary of the three trained models with optimal hyperparameters. 
 
 
 
